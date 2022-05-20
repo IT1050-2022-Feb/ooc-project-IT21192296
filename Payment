@@ -1,0 +1,37 @@
+#include "Booking.h"
+#define SIZE 2
+class Payment {
+private:
+int paymentId;
+char paymentType[20];
+double paymentAmount;
+//Class Relationship
+Booking* booking[SIZE];
+public:
+Payment();
+Payment(int id, const char type[], double amount);
+void confirmDetails();
+void viewDetails();
+void statusDisplay();
+};
+#include "Payment.h"
+#include <cstring>
+Payment::Payment() {
+paymentId = 0;
+strcpy_s(paymentType, "");
+paymentAmount = 0;
+}
+Payment::Payment(int id, const char type[], double amount) {
+paymentId = id;
+strcpy_s(paymentType, type);
+paymentAmount = amount;
+}
+void Payment::confirmDetails()
+{
+}
+void Payment::viewDetails()
+{
+}
+void Payment::statusDisplay()
+{
+?
